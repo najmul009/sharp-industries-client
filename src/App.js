@@ -5,6 +5,7 @@ import './Pages/Common/Common.css'
 import { Route, Routes } from 'react-router-dom';
 import Products from './Pages/Products/Products';
 import Login from './Pages/Login/Login';
+import SignUp from './Pages/Login/SignUp';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
        <Route path='/order' element={<></>}></Route>
        <Route path='/products' element={<Products></Products>}></Route>
        <Route path='login' element={<Login></Login>}></Route>
+       <Route path='/signup' element={<SignUp></SignUp>}></Route>
      </Routes>
     
     </div>
