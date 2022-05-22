@@ -1,6 +1,23 @@
 import React from 'react';
+import { signOut } from 'firebase/auth';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import Loading from './Loading';
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+    localStorage.removeItem('accessToken');
+  };
+
+  if (loading) {
+    return <Loading></Loading>
+  }
+  let signInError;
+  if (error ) {
+    signInError = <p className='text-red-500'><small>{error?.message }</small></p>
+};
     return (
         <div className="navbar  lg:px-20 pt-5 ">
             <div className="navbar-start">
@@ -28,7 +45,8 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/' className="btn ">Login</Link>
+            {signInError}
+        {user ? <button onClick={logout} className="btn btn-accent">Logout</button> : <Link to='/login' className="btn">Login</Link>}
             </div>
         </div>
     );
