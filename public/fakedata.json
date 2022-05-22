@@ -1,62 +1,37 @@
 [
     {
         "name":"KWCD1703 cordless drill 18v",
+        "minimum":10,
+        "price":100,
         "img": "https://sc04.alicdn.com/kf/HTB1_iH4gOLaK1RjSZFxq6ymPFXa1.jpg",
         "description": "Lithium(Li-ion) Cordless drill 18V 12V/16V/20V/24V by KINPOW industry co.ltd power tools"
     },
     {
-        "name":"plastic pipe cutter",
-        "img": "https://s.alicdn.com/@sc04/kf/H64f0c123afca4b74a3daa891b25ca097u.jpg_300x300.jpg",
-        "description": "IFAN Plumbing Other Hand Tools Polyethylene Pipe Cutter Plastic Pipe and Fitting Pipe Cutter"
-    },
-    {
-        "name":"AAC/ACSR/ABC/AAAC",
-        "img": "https://s.alicdn.com/@sc04/kf/H8ff8272763fd472c96844a51ccaaa804o.jpg_300x300.jpg",
-        "description": "AIYIA AAC/ACSR/ABC/AAAC Aluminum Electrical Wire manufacturer, Aluminum Conductor Cables"
-    },
-    {
         "name":"QS-DETJ00391",
+        "minimum":10,
+        "price":100,
         "img": "https://s.alicdn.com/@sc04/kf/Hb2492f1f6ecf486498acb607b4981a66V.png_300x300.png",
         "description": "QHOBBY Factory direct supply BV electrical wire prices electrical wire 2mm electrical wire with manufacturing plant"
     },
     {
         "name":"DKJS65Z5F",
+        "minimum":10,
+        "price":100,
         "img": "https://s.alicdn.com/@sc04/kf/Hc48b7746f79a42d59333399c92f6c212w.jpg_300x300.jpg",
         "description": "DEKO DKJS65Z5F 650W Jig Saw 3000spm Power Tool Jig Saw 7 Speed Types Varible Speed Tools Mini Wholesale Machine"
     },
     {
-        "name":"",
-        "img": "",
-        "description": ""
+        "name":"plastic pipe cutter",
+        "minimum":10,
+        "price":100,
+        "img": "https://s.alicdn.com/@sc04/kf/H64f0c123afca4b74a3daa891b25ca097u.jpg_300x300.jpg",
+        "description": "IFAN Plumbing Other Hand Tools Polyethylene Pipe Cutter Plastic Pipe and Fitting Pipe Cutter"
     },
     {
-        "name":"",
-        "img": "",
-        "description": ""
-    },
-    {
-        "name":"",
-        "img": "",
-        "description": ""
-    },
-    {
-        "name":"",
-        "img": "",
-        "description": ""
-    },
-    {
-        "name":"",
-        "img": "",
-        "description": ""
-    },
-    {
-        "name":"",
-        "img": "",
-        "description": ""
-    },
-    {
-        "name":"",
-        "img": "",
-        "description": ""
+        "name":"AAC/ACSR/ABC/AAAC",
+        "minimum":10,
+        "price":100,
+        "img": "https://s.alicdn.com/@sc04/kf/H8ff8272763fd472c96844a51ccaaa804o.jpg_300x300.jpg",
+        "description": "AIYIA AAC/ACSR/ABC/AAAC Aluminum Electrical Wire manufacturer, Aluminum Conductor Cables"
     }
 ]
