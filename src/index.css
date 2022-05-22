@@ -17,10 +17,18 @@ body {
 
 .fnt-os{
     font-family: 'Oswald', sans-serif;
+    
 }
 
-
-
+.bs-sum img{
+  width: 100px;
+}
+.b-sum{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
