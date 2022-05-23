@@ -6,18 +6,18 @@ import auth from '../../firebase.init';
 import Loading from './Loading';
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
-  const logout = () => {
-    signOut(auth);
-    localStorage.removeItem('accessToken');
-  };
+    const logout = () => {
+        signOut(auth);
+        localStorage.removeItem('accessToken');
+    };
 
-  if (loading) {
-    return <Loading></Loading>
-  }
-  let signInError;
-  if (error ) {
-    signInError = <p className='text-red-500'><small>{error?.message }</small></p>
-};
+    if (loading) {
+        return <Loading></Loading>
+    }
+    let signInError;
+    if (error) {
+        signInError = <p className='text-red-500'><small>{error?.message}</small></p>
+    };
     return (
         <div className="navbar  lg:px-20 pt-5 ">
             <div className="navbar-start">
@@ -29,7 +29,7 @@ const Header = () => {
                         <li><Link to='/'>HOME</Link></li>
                         <li><Link to='/'>PRODUCTS</Link></li>
                         <li><Link to='/'>PORTFOLIO</Link></li>
-                        <li><Link to='/'>ABOUT US</Link></li>
+                        <li><Link to='/dashboard'>DashBoard</Link></li>
                     </ul>
                 </div>
                 <Link to='/' className="     normal-case text-xl">
@@ -41,13 +41,33 @@ const Header = () => {
                     <li><Link to='/'>HOME</Link></li>
                     <li><Link to='/'>PRODUCTS</Link></li>
                     <li><Link to='/'>PORTFOLIO</Link></li>
-                    <li><Link to='/'>ABOUT US</Link></li>
+                    <li><Link to='/dashboard'>DashBoard</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
-            {signInError}
-        {user ? <button onClick={logout} className="btn btn-accent text-white">Logout</button> : <Link to='/login' className="btn text-white">Login</Link>}
+                {signInError}
+                {!user && <Link to='/login' className="btn text-white">Login</Link>}
+                {user && <>
+                    <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src={user.photoURL || "https://api.lorem.space/image/face?hash=33791"} alt='' />
+                        </div>
+                    </label>
+                    <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <Link to='/' class="justify-between">
+                                Profile
+                                
+                            </Link>
+                        </li>
+                        
+                        <li><button onClick={logout} >Logout</button></li>
+                    </ul>
+                </div>
+                </>}
             </div>
+            
         </div>
     );
 };
