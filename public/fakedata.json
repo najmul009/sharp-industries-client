@@ -3,31 +3,35 @@
         "name":"LY-Z1601",
         "brand":"Xpert",
         "minimum":10,
-        "price":100,
+        "available":10000,
+        "price":54,
         "img": "https://s.alicdn.com/@sc04/kf/HTB1nPXTBH5YBuNjSspo762eNFXa0.png_300x300.png",
         "description": "16mm drill power tools"
     },
     {
         "name":"QS-DETJ00391",
         "brand":"Ramasta",
-        "minimum":10,
-        "price":100,
+        "minimum":8,
+        "available":20000,
+        "price":110,
         "img": "https://s.alicdn.com/@sc04/kf/Hb2492f1f6ecf486498acb607b4981a66V.png_300x300.png",
         "description": "QHOBBY Factory direct supply BV electrical wire prices electrical wire 2mm electrical wire with manufacturing plant"
     },
     {
         "name":"DKJS65Z5F",
         "brand":"Xpert",
-        "minimum":10,
-        "price":100,
+        "minimum":15,
+        "available":9000,
+        "price":95,
         "img": "https://s.alicdn.com/@sc04/kf/Hc48b7746f79a42d59333399c92f6c212w.jpg_300x300.jpg",
         "description": "DEKO DKJS65Z5F 650W Jig Saw 3000spm Power Tool Jig Saw 7 Speed Types Varible Speed Tools Mini Wholesale Machine"
     },
     {
         "name":"plastic pipe cutter",
         "brand":"D-Fox",
-        "minimum":10,
-        "price":100,
+        "minimum":20,
+        "available":12000,
+        "price":85,
         "img": "https://s.alicdn.com/@sc04/kf/H64f0c123afca4b74a3daa891b25ca097u.jpg_300x300.jpg",
         "description": "IFAN Plumbing Other Hand Tools Polyethylene Pipe Cutter Plastic Pipe and Fitting Pipe Cutter"
     },
@@ -35,6 +39,7 @@
         "name":"AAC/ACSR/ABC/AAAC",
         "brand":"Xpert",
         "minimum":10,
+        "available":8000,
         "price":100,
         "img": "https://s.alicdn.com/@sc04/kf/H8ff8272763fd472c96844a51ccaaa804o.jpg_300x300.jpg",
         "description": "AIYIA AAC/ACSR/ABC/AAAC Aluminum Electrical Wire manufacturer, Aluminum Conductor Cables"
@@ -42,16 +47,18 @@
     {
         "name":"SIGMA-DES-A1",
         "brand":"AX-DP",
-        "minimum":10,
-        "price":100,
+        "minimum":5,
+        "available":6000,
+        "price":109,
         "img": "https://s.alicdn.com/@sc04/kf/He7d1bfc2ca1b4a4490aa6983bea5e0ed6.jpg_300x300.jpg",
         "description": "Electric Screwdriver Drill with Li-ion Baterry Cordless Power Drill Kit Tools High Quality Nepal Electric Drill Machine"
     },
     {
         "name":"YY-2428",
         "brand":"Xpert",
-        "minimum":10,
-        "price":100,
+        "minimum":8,
+        "available":50000,
+        "price":50,
         "img": "https://s.alicdn.com/@sc04/kf/H87548343d3f84bbe97cf297e216ca5393.jpg_300x300.jpg",
         "description": "Special Counter 32mm 3 Years Power Hammer Drills Hemar Drill Hamar Dril Machine 24kgs Black "
     },
@@ -59,15 +66,17 @@
         "name":"YTHA-3",
         "brand":"Hamim",
         "minimum":10,
-        "price":100,
+        "available":1000,
+        "price":70,
         "img": "https://s.alicdn.com/@sc04/kf/HTB1ALHTdRWD3KVjSZFsq6AqkpXaw.jpg_300x300.jpg",
         "description": "2019 New design fasion hammer claw hammer"
     },
     {
         "name":"BS661201",
         "brand":"Xpert",
-        "minimum":10,
-        "price":100,
+        "minimum":15,
+        "available":5000,
+        "price":45,
         "img": "https://s.alicdn.com/@sc04/kf/HTB1EklCXcrrK1Rjy1zeq6xalFXaU.jpg_300x300.jpg",
         "description": "High Quality Electric Chain Saw 2100W"
     }
