@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import Loading from '../Common/Loading';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import google from '../../assets/google.png'
-// import useToken from '../../Hooks/useToken';
+import useToken from '../../Hooks/useToken';
 
 const SignUp = () => {
-    const navigate = useNavigate()
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
@@ -20,8 +19,15 @@ const SignUp = () => {
     ] = useCreateUserWithEmailAndPassword(auth);
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    // const [token] = useToken(user||gUser||eUser);
-
+    const [token] = useToken(user||gUser||eUser);
+    const navigate = useNavigate()
+    const location = useLocation()
+    let from = location.state?.from?.pathname || "/";
+    useEffect(()=>{
+        if(token){
+            navigate(from, { replace: true })
+        };
+    },[token,from,navigate])
     let signInError;
     if (loading || gLoading || updating) {
         return <Loading></Loading>
@@ -29,9 +35,7 @@ const SignUp = () => {
     if (error || gError || updateError) {
         signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError.message}</small></p>
     };
-    if(user||gUser||eUser) {
-        navigate('/appionment')
-    };
+    
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({displayName : data.name});
