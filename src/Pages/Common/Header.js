@@ -46,7 +46,7 @@ const Header = () => {
             </div>
             <div className="navbar-end">
             {signInError}
-        {user ? <button onClick={logout} className="btn btn-accent">Logout</button> : <Link to='/login' className="btn">Login</Link>}
+        {user ? <button onClick={logout} className="btn btn-accent text-white">Logout</button> : <Link to='/login' className="btn text-white">Login</Link>}
             </div>
         </div>
     );

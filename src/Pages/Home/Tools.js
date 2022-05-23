@@ -4,7 +4,7 @@ import Card from './Card';
 const Tools = () => {
     const [items, setItems] = useState([])
     useEffect(() => {
-        fetch('fakedata.json')
+        fetch('http://localhost:5000/tools')
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
