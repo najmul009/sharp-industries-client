@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Order = () => {
@@ -33,11 +34,33 @@ const Order = () => {
         const address = event.target.address.value;
         const phone = event.target.phone.value;
         const order = {
-            
+            userEmail: user.email,
+            productName: name,
+            orderQuantity: orderQuantity,
+            totalAmount: totalPrice,
+            brand: brand,
+            shippingAddress: address,
+            phone: phone
         }
-        
+        fetch('http://localhost:5000/order',{
+           method: 'POST',
+           headers:{
+               'content-type': 'application/json'
+           },
+           body: JSON.stringify(order)
+       })
+       .then(res=>res.json())
+       .then(data=>{
+           if(data.success){
+               toast('Order Pleaced')
+               event.target.reset()
+               setTotalPrice(null);
+           }
+           else{
+               toast.error('something has worng plase try again')
+           }
+       })
     };
-    console.log(orderQuantity,totalPrice);
     return (
         <div className='bg-base-200 px-4 lg:px-20'>
             <h1 className='py-4 text-neutral'>Tools  {'>'}  Shop  {'>'}  Product  {'>'}  {name}</h1>
