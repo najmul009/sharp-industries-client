@@ -40,7 +40,8 @@ const Order = () => {
             totalAmount: totalPrice,
             brand: brand,
             shippingAddress: address,
-            phone: phone
+            phone: phone,
+            img: img
         }
         fetch('http://localhost:5000/order',{
            method: 'POST',
