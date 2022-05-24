@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from '../Common/Loading';
+import DeleteConfirmModal from './DeleteConfirmModal';
 import OrderRow from './OrderRow';
 
 const MyOrder = () => {
@@ -67,6 +68,11 @@ const MyOrder = () => {
                     </tbody>
                 </table>
             </div>
+            {confirmModal && <DeleteConfirmModal 
+            order={confirmModal}
+            refetch={refetch}
+            setConfirmModal={setConfirmModal}
+            ></DeleteConfirmModal>}
         </div>
     );
 };
