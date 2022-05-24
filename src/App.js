@@ -8,7 +8,7 @@ import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
 import Order from './Pages/Products/Order';
 import RequireAuth from './Pages/Login/RequireAuth';
-import { ToastContainer} from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DashBoard from './Pages/DashBoard/DashBoard';
 import MyProfile from './Pages/DashBoard/MyProfile';
@@ -20,6 +20,7 @@ import ManageUsers from './Pages/DashBoard/Admin/ManageUsers';
 import AddProduct from './Pages/DashBoard/Admin/AddProduct';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import NotFound from './Pages/Common/NotFound';
+import Payment from './Pages/Payment/Payment';
 
 function App() {
   return (
@@ -33,18 +34,18 @@ function App() {
             <Order></Order>
           </RequireAuth>}></Route>
 
-          {/* dashboard route  */}
-          <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard> </RequireAuth>}>
+        {/* dashboard route  */}
+        <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard> </RequireAuth>}>
           <Route index element={<MyOrder></MyOrder>}></Route>
-            <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
-            <Route path='/dashboard/addreview' element={<AddReview></AddReview>}></Route>
-            <Route path='/dashboard/manageorders' element={<RequireAdmin> <ManageOrders></ManageOrders> </RequireAdmin> }></Route>
-            <Route path='/dashboard/manageproducts' element={<RequireAdmin> <ManageProducts></ManageProducts> </RequireAdmin> }></Route>
-            <Route path='/dashboard/manageusers' element={<RequireAdmin> <ManageUsers></ManageUsers> </RequireAdmin> }></Route>
-            <Route path='/dashboard/addproduct' element={<RequireAdmin> <AddProduct></AddProduct> </RequireAdmin> }></Route>
-          </Route>
-          {/* dashboard route  end*/}
-
+          <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='/dashboard/addreview' element={<AddReview></AddReview>}></Route>
+          <Route path='/dashboard/manageorders' element={<RequireAdmin> <ManageOrders></ManageOrders> </RequireAdmin>}></Route>
+          <Route path='/dashboard/manageproducts' element={<RequireAdmin> <ManageProducts></ManageProducts> </RequireAdmin>}></Route>
+          <Route path='/dashboard/manageusers' element={<RequireAdmin> <ManageUsers></ManageUsers> </RequireAdmin>}></Route>
+          <Route path='/dashboard/addproduct' element={<RequireAdmin> <AddProduct></AddProduct> </RequireAdmin>}></Route>
+        </Route>
+        {/* dashboard route  end*/}
+        <Route path='/payment/:id' element={<RequireAuth> <Payment></Payment> </RequireAuth>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

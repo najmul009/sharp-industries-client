@@ -34,6 +34,7 @@ const Order = () => {
         const address = event.target.address.value;
         const phone = event.target.phone.value;
         const order = {
+            userName: user.displayName,
             userEmail: user.email,
             productName: name,
             orderQuantity: orderQuantity,
