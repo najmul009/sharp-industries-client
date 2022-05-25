@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const [user] = useAuthState(auth);
     const [confirmModal, setConfirmModal] = useState(null);
     const { isLoading, error, data,refetch } = useQuery(['tools'], () =>
-        fetch(`http://localhost:5000/tools`)
+        fetch(`https://calm-anchorage-26562.herokuapp.com/tools`)
             .then(res =>res.json())          
     );
     if (isLoading) {

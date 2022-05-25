@@ -11,7 +11,7 @@ const ManageUsers = () => {
     const navigate = useNavigate()
     const [confirmModal, setConfirmModal] = useState(null);
     const { isLoading, error, data: users, refetch } = useQuery('allusers', () =>
-        fetch(`http://localhost:5000/allusers`,{
+        fetch(`https://calm-anchorage-26562.herokuapp.com/allusers`,{
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

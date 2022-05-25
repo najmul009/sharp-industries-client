@@ -12,7 +12,7 @@ const Order = () => {
     const [error,setError] = useState('');
     const { id } = useParams();
     useEffect(()=>{
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://calm-anchorage-26562.herokuapp.com/tools/${id}`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setProduct(data))
@@ -44,7 +44,7 @@ const Order = () => {
             phone: phone,
             img: img
         }
-        fetch('http://localhost:5000/order',{
+        fetch('https://calm-anchorage-26562.herokuapp.com/order',{
            method: 'POST',
            headers:{
                'content-type': 'application/json',

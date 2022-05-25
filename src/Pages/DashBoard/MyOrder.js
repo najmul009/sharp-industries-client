@@ -13,7 +13,7 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
     const [confirmModal, setConfirmModal] = useState(null);
     const { isLoading, error, data,refetch } = useQuery(['myorders'], () =>
-        fetch(`http://localhost:5000/myorders?email=${user.email}`, {
+        fetch(`https://calm-anchorage-26562.herokuapp.com/myorders?email=${user.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
