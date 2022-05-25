@@ -29,9 +29,9 @@ const Payment = () => {
             <div class="card w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title">Hello! {userName}</h2>
-                    <p>You are paying fro <strong>{productName}</strong></p>
+                    <p>You are paying fro <strong className='text-neutral'>{productName}</strong></p>
                     <p>Brand: <strong>{brand}</strong></p>
-                    <p>Product quantiity: <strong className='text-red-700'> {orderQuantity}</strong> </p>
+                    <p>Product quantiity: <strong className='text-red-700'> {orderQuantity} pis</strong>  </p>
                     <p>Total Amount: <strong className='text-red-500'>${totalAmount}</strong></p>
                     <br />
                     <br />

@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 const DeleteConfirmModal = ({ order, refetch, setConfirmModal }) => {
     const { productName, orderQuantity, totalAmount, _id } = order
     const cancelOrder = () => {
-        console.log('kasklaks');
         fetch(`http://localhost:5000/cancelorder/${_id}`, {
             method: 'DELETE',
             headers: {

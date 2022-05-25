@@ -71,7 +71,7 @@ const CheckoutForm = ({ bokingData }) => {
                 setPaymentData(paymentIntent.id);
                 
                 const payment={
-                    appionmentId: _id,
+                    orderId: _id,
                     transactionId: paymentIntent.id
                 }
                 fetch(`http://localhost:5000/order/${_id}`,{
@@ -116,10 +116,10 @@ const CheckoutForm = ({ bokingData }) => {
                 cardError && <p className='text-red-500'> {cardError}</p>
             }
             {
-                success && <p className='text-secondary text-2xl'> {success}</p>
+                success && <p className='text-green-500 text-xl'> {success}</p>
             }
             {
-                paymentData && <p className='text-secondary text-2xl'> {paymentData}</p>
+                paymentData && <p className='text-secondary text-xl'>transaction ID: <span className='text-red-500'> {paymentData}</span></p>
             }
         </form>
     );
