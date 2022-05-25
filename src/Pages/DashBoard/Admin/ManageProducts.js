@@ -27,20 +27,20 @@ const ManageProducts = () => {
     }
     return (
         <div>
-            <h1 className='text-center text-secondary text-2xl my-5'>Manage Orders</h1>
+            <h1 className='text-center text-secondary text-2xl my-5'>Manage Products</h1>
             {fetchError}
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
-                        <tr>
+                        <tr className='mark'>
                             <th>#</th>
                             <th>Model</th>
                             <th>Brand</th>
                             <th>Price</th>
-                            <th>Minimum quantity</th>
-                            <th>Available quantity</th>
+                            <th>Minimum <br /> quantity</th>
+                            <th>Available <br /> quantity</th>
                             <th>Update</th>
-                            <th>Cancel</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>

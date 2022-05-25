@@ -44,7 +44,7 @@ const ManageOrders = () => {
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
-                        <tr>
+                        <tr className='mark'>
                             <th>#</th>
                             <th>User</th>
                             <th>Model</th>

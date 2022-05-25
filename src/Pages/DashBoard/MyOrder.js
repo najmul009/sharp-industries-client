@@ -44,14 +44,14 @@ const MyOrder = () => {
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
-                        <tr >
-                            <th className='text-base'>#</th>
-                            <th className='text-base'>Model</th>
-                            <th className='text-base'>Quantity</th>
-                            <th className='text-base'>Total Price</th>
-                            <th className='text-base'>Cancel Order</th>
-                            <th className='text-base'>Payment</th>
-                            <th className='text-base'>Transaction Id</th>
+                        <tr className='mark'>
+                            <th>#</th>
+                            <th>Model</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Cancel Order</th>
+                            <th>Payment</th>
+                            <th>Transaction Id</th>
                         </tr>
                     </thead>
                     <tbody>
