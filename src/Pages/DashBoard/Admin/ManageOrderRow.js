@@ -2,12 +2,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const ManageOrderRow = ({ order, index, setConfirmModal }) => {
+const ManageOrderRow = ({ order, index, setConfirmModal,refetch }) => {
     const { userEmail, productName, orderQuantity, totalAmount, brand, img, paid, _id } = order;
-    const [shipp, setShipp] = useState(false)
     const shipping= ()=>{
-        setShipp(true)
-        toast('Product sent for shippment')
+        fetch(`http://localhost:5000/shipp/${_id}`,{
+                    method: 'PATCH',
+                    headers: {
+                        'content-type': 'application/json',
+                        'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                    },
+                   
+                })
+                .then(res=>res.json())
+                .then(data=>{                  
+                    toast('Product sent for shippment')
+                    refetch()
+                })
+        
     }
     return (
         <tr class="hover">
@@ -20,8 +31,8 @@ const ManageOrderRow = ({ order, index, setConfirmModal }) => {
 
 
             <td>{
-                shipp? 
-                <span className="text-green-500">on shippment</span>
+               order.shippment? 
+                <span className="text-green-500">on shippment...</span>
                 :
                 ((totalAmount && !order.paid) ? <span className="text-red-500 font-bold ">Not Paid</span> : 
                 <button onClick={shipping} className='btn btn-naturel'>Shipp</button>)

@@ -12,7 +12,7 @@ const ManageOrders = () => {
     const navigate = useNavigate()
     const [user] = useAuthState(auth);
     const [confirmModal, setConfirmModal] = useState(null);
-    const { isLoading, error, data,refetch } = useQuery(['myorders'], () =>
+    const { isLoading, error, data,refetch } = useQuery(['manageOrders'], () =>
         fetch(`http://localhost:5000/orders`, {
             method: 'GET',
             headers: {
@@ -62,6 +62,7 @@ const ManageOrders = () => {
                             index={index}
                             order={order}
                             setConfirmModal={setConfirmModal}
+                            refetch={refetch}
                             ></ManageOrderRow>)
                         }
 
