@@ -17,7 +17,7 @@ const DashBoard = () => {
                 </label>
                 {/* <!-- Page content here --> */}
                 <div className='px-4 md:px-10 w-full'>
-                    <h1 className='text-primary text-5xl text-center'>DashBoard</h1>
+                    <h1 className='text-neutral font-bold my-3 text-4xl text-center'>DashBoard</h1>
                     <Outlet></Outlet>
                 </div>
 

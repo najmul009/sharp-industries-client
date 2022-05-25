@@ -39,7 +39,7 @@ const MyOrder = () => {
     }
     return (
         <div>
-            <h1 className='text-center text-secondary text-2xl my-5'>My Orders</h1>
+            <h1 className='w-fit mx-auto border-b-4  border-primary text-secondary text-2xl my-5 '>My Orders</h1>
             {fetchError}
             <div class="overflow-x-auto">
                 <table class="table w-full">
