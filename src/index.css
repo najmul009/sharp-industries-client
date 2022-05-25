@@ -38,6 +38,12 @@ body {
   padding: 5px;
   margin-top: 15px;
 }
+.box-lg{
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 15px;
+}
 .box:focus{
   outline: none;
   

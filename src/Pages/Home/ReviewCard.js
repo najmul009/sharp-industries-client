@@ -2,11 +2,12 @@ import React from 'react';
 
 const ReviewCard = ({feedback}) => {
     const {name,img,review} = feedback;
+    console.log(feedback);
     return (
         <div class="card bg-base-100 shadow-xl">
             <div class="avatar mt-2 justify-center ">
                 <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2  ">
-                    <img src={img} alt='' />
+                    <img src={img?img:"https://api.lorem.space/image/face?hash=33791"} alt='' />
                 </div>
             </div>
             <div class="card-body items-center text-center">
