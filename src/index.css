@@ -51,6 +51,10 @@ body {
 .mark>th{
   font-size: 1rem;
 }
+
+.fnt-time{
+  font-family: 'Times New Roman', Times, serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

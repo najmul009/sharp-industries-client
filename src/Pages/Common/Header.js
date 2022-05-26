@@ -39,8 +39,8 @@ const Header = () => {
                     </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 fnt-os font-bold">
                         <li><Link to='/'>HOME</Link></li>
-                        <li><Link to='/'>PRODUCTS</Link></li>
-                        <li><Link to='/'>PORTFOLIO</Link></li>
+                        <li><Link to='/products'>PRODUCTS</Link></li>
+                        <li><Link to='/protfolio'>PORTFOLIO</Link></li>
                         <li><Link to='/dashboard'>DashBoard</Link></li>
                     </ul>
                 </div>
@@ -51,8 +51,8 @@ const Header = () => {
             <div className="ml-96 navbar-center  hidden lg:flex">
                 <ul className="menu menu-horizontal ml-20 p-0 fnt-os font-bold">
                     <li><Link to='/'>HOME</Link></li>
-                    <li><Link to='/'>PRODUCTS</Link></li>
-                    <li><Link to='/'>PORTFOLIO</Link></li>
+                    <li><Link to='/products'>PRODUCTS</Link></li>
+                    <li><Link to='/protfolio'>PORTFOLIO</Link></li>
                     <li><Link to='/dashboard'>DashBoard</Link></li>
                 </ul>
             </div>

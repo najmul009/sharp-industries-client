@@ -9,12 +9,12 @@ module.exports = {
     themes: [
       {
         experstheme: {
-          primary: "#FDB913",
+          primary: "#FFC815",
           secondary: "#1B1B1B",
           accent: "#3A4256",
           neutral: "#2eaed3",
           "base-100": "#ffffff",
-          "order-100":""
+          "me-100":"#000000"
         },
       },
       "cupcake",

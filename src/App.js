@@ -21,6 +21,7 @@ import AddProduct from './Pages/DashBoard/Admin/AddProduct';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import NotFound from './Pages/Common/NotFound';
 import Payment from './Pages/Payment/Payment';
+import PortFolio from './Pages/PortFilio/PortFolio';
 
 function App() {
   return (
@@ -29,10 +30,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
+        <Route path='/protfolio' element={<PortFolio></PortFolio>}></Route>
         <Route path='/order/:id' element={
           <RequireAuth>
             <Order></Order>
           </RequireAuth>}></Route>
+
 
         {/* dashboard route  */}
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard> </RequireAuth>}>
