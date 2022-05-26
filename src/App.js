@@ -23,6 +23,7 @@ import NotFound from './Pages/Common/NotFound';
 import Payment from './Pages/Payment/Payment';
 import PortFolio from './Pages/PortFilio/PortFolio';
 import Blogs from './Pages/Blogs/Blogs';
+import EditProfile from './Pages/DashBoard/EditProfile';
 
 function App() {
   return (
@@ -32,11 +33,15 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
         <Route path='/protfolio' element={<PortFolio></PortFolio>}></Route>
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>  
         <Route path='/order/:id' element={
           <RequireAuth>
             <Order></Order>
           </RequireAuth>}></Route>
-        <Route path='blogs' element={<Blogs></Blogs>}></Route>  
+        <Route path='/editprofile' element={
+          <RequireAuth>
+           <EditProfile></EditProfile>
+          </RequireAuth>}></Route>
 
         {/* dashboard route  */}
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard> </RequireAuth>}>

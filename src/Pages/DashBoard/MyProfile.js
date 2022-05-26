@@ -1,11 +1,13 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
     return (
         <div>
+            <Link className='btn btn-sm btn-primary' to='/editprofile'>Edit Profile</Link>
             <div className='bg-base-200'>
                 <h1 className='text-3xl border-b-4 p-3 border-accent'>My Profile <div className="badge bg-green-500">online</div>  
                 </h1>
