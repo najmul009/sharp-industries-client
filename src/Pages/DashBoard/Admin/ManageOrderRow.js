@@ -35,13 +35,13 @@ const ManageOrderRow = ({ order, index, setConfirmModal,refetch }) => {
                 <span className="text-green-500">on shippment...</span>
                 :
                 ((totalAmount && !order.paid) ? <span className="text-red-500 font-bold ">Not Paid</span> : 
-                <button onClick={shipping} className='btn btn-naturel'>Shipp</button>)
+                <button onClick={shipping} className='btn btn-sm btn-naturel'>Shipp</button>)
            
                     
             }</td>
 
             <td>{
-                order.paid ? <span className="text-green-500">Already Paid!</span> : <label  onClick={() => setConfirmModal(order)} for="delete-confirm-modal" class="btn modal-button btn-warning ">Cancel</label >
+                order.paid ? <span className="text-green-500">Already Paid!</span> : <label  onClick={() => setConfirmModal(order)} for="delete-confirm-modal" class="btn  btn-sm modal-button btn-warning ">Cancel</label >
             }
 
             </td>

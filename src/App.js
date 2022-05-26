@@ -36,8 +36,8 @@ function App() {
 
         {/* dashboard route  */}
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard> </RequireAuth>}>
-          <Route index element={<MyOrder></MyOrder>}></Route>
-          <Route path='/dashboard/myprofile' element={<MyProfile></MyProfile>}></Route>
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='/dashboard/myorder' element={<MyOrder></MyOrder>}></Route>
           <Route path='/dashboard/addreview' element={<AddReview></AddReview>}></Route>
           <Route path='/dashboard/manageorders' element={<RequireAdmin> <ManageOrders></ManageOrders> </RequireAdmin>}></Route>
           <Route path='/dashboard/manageproducts' element={<RequireAdmin> <ManageProducts></ManageProducts> </RequireAdmin>}></Route>

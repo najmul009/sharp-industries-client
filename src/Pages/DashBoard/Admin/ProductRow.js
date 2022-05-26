@@ -18,11 +18,11 @@ const ProductRow = ({ product, index, setConfirmModal, refetch }) => {
 
 
             <td>
-                <button onClick={shipping} className='btn btn-naturel'>Edit</button>
+                <button onClick={shipping} className='btn btn-sm btn-naturel'>Edit</button>
             </td>
 
             <td>
-                <label onClick={() => setConfirmModal(product)} for="delete-confirm-modal" class="btn modal-button btn-warning ">Delete</label >
+                <label onClick={() => setConfirmModal(product)} for="delete-confirm-modal" class="btn btn-sm modal-button btn-warning ">Delete</label >
 
             </td>
         </tr>

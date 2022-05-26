@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { signOut } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Loading from './Loading';
+import logo from '../../assets/logo.png'
 const Header = () => {
     const [user, loading, error] = useAuthState(auth);
+    const [userName,setUserName] = useState('')
+    useEffect(()=>{
+        if(user){
+
+        const name = user.displayName;
+        const myArray = name.split(" ");
+        setUserName(myArray[0])
+    }
+    },[user])
     const logout = () => {
         signOut(auth);
         localStorage.removeItem('accessToken');
@@ -18,9 +28,8 @@ const Header = () => {
     if (error) {
         signInError = <p className='text-red-500'><small>{error?.message}</small></p>
     };
-    const name = user.displayName;
-    const myArray = name.split(" ");
-    const userName = myArray[0];
+    
+    
     return (
         <div className="navbar  lg:px-20 pt-5 ">
             <div className="navbar-start">
@@ -36,7 +45,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to='/' className="     normal-case text-xl">
-                    <button>Exparts</button>
+                    <img src={logo} alt="" />
                 </Link>
             </div>
             <div className="ml-96 navbar-center  hidden lg:flex">
@@ -49,8 +58,8 @@ const Header = () => {
             </div>
             <div className="navbar-end">
                 {signInError}
-                {!user && <Link to='/login' className="btn text-white">Login</Link>}
-                {user && <div className='flex items-center border-2 border-base-200 rounded-full pr-2 hover:bg-base-200'>
+                {!user && <Link to='/login' className="btn btn-sm text-white">Login</Link>}
+                {user && <div className='flex items-center hover:border  rounded-full pr-2 hover:bg-base-200'>
                    
                     <div class="dropdown dropdown-end">
                         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
@@ -59,11 +68,9 @@ const Header = () => {
                             </div>
                         </label>
                         <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                            <li className='text-center'>
-                                <h1 className='text-center font-bold text-accent'>{user.displayName}</h1>
-                            </li>
+                            
                             <li>
-                                <Link to='/' class="justify-between">
+                                <Link to='/dashboard' class="justify-between">
                                     Profile
 
                                 </Link>

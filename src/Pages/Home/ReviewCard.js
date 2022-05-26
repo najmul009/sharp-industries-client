@@ -2,7 +2,6 @@ import React from 'react';
 
 const ReviewCard = ({feedback}) => {
     const {name,img,review} = feedback;
-    console.log(feedback);
     return (
         <div class="card bg-base-100 shadow-xl">
             <div class="avatar mt-2 justify-center ">

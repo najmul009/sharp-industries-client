@@ -68,8 +68,8 @@ const Order = () => {
         <div className='bg-base-200 px-4 lg:px-20'>
             <h1 className='py-4 text-neutral'>Tools  {'>'}  Shop  {'>'}  Product  {'>'}  {name}</h1>
             <div className='flex  bg-base-100 '>
-                <div>
-                    <img className='p-4' src={img} alt="" />
+                <div className=' shadow-xl h-fit'>
+                    <img className='p-1' src={img} alt="" />
                 </div>
                 <div className='w-5/12 p-4 px-4'>
                     <h1 className='text-xl'>{description}</h1>

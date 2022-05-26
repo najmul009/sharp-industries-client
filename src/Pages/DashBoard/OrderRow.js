@@ -12,13 +12,13 @@ const OrderRow = ({ order, index, setConfirmModal }) => {
             <td>{orderQuantity}</td>
             <td>{totalAmount}</td>
             <td>{
-                order.paid? <span className="text-red-500">You can't cancel after pay</span> : <label onClick={() => setConfirmModal(order)} for="delete-confirm-modal" class="btn modal-button btn-warning ">Cancel</label >
+                order.paid? <span className="text-red-500">You can't cancel after pay</span> : <label onClick={() => setConfirmModal(order)} for="delete-confirm-modal" class="btn btn-sm modal-button btn-warning ">Cancel</label >
                 }
                 
             </td>
             <td>{
                 (totalAmount && !order.paid) ? <Link to={`/payment/${_id}`}>
-                    <button className='btn btn-naturel'>Pay</button>
+                    <button className='btn btn-sm btn-naturel'>Pay</button>
                 </Link>
                     : <span className="text-green-500 font-bold ">Paid</span>
             }</td>
