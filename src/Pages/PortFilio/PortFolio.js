@@ -3,6 +3,10 @@ import me from '../../assets/me.png'
 import server from '../../assets/server.png'
 import uiux from '../../assets/uiux.png'
 import web from '../../assets/web.png'
+import demo1 from '../../assets/demo-1.JPG'
+import demo2 from '../../assets/demo-2.JPG'
+import demo3 from '../../assets/demo-3.JPG'
+import { Link } from 'react-router-dom';
 
 
 const PortFolio = () => {
@@ -55,7 +59,7 @@ const PortFolio = () => {
             <h1 className='text-center my-10 text-3xl font-bold text-white'>My Awesome <span className='text-primary' >Services</span></h1>
 
 
-            <div className='flex lg:px-20 gap-5'>
+            <div className='cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-20 gap-5 '>
 
                 <div class="card  bg-accent shadow-xl hover:bg-primary">
                     <div class="card-body w-96 text-white">
@@ -120,6 +124,26 @@ const PortFolio = () => {
 
             </div>
 
+            <h1 className='text-center mt-20 my-10 text-3xl font-bold text-white'>My  <span className='text-primary' >Projects</span></h1>
+            <div className='cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:px-20 gap-5 py-10'>
+                <div class="card w-96 bg-base-100 shadow-xl h-fit">
+                    <figure><img src={demo1} alt="Shoes" /></figure>
+                    <Link to='https://purepd.netlify.app/' class="btn btn-primary">CheckOut</Link>
+                </div>
+
+
+                <div class="card w-96 bg-base-100 shadow-xl h-fit">
+                    <figure><img src={demo2} alt="Shoes" /></figure>
+                    <Link to='https://rocky-fitness-44935.web.app/' class="btn btn-primary">CheckOut</Link>
+                </div>
+
+
+                <div class="card w-96 bg-base-100 shadow-xl h-fit">
+                    <figure><img src={demo3} alt="Shoes" /></figure>
+                    <Link to='https://leptop-db.firebaseapp.com/' class="btn btn-primary">CheckOut</Link>
+
+                </div>
+            </div>
 
             <div className="h-96 bg-primary flex flex-col items-center justify-center">
                 <h1 className='text-center text-3xl font-bold'>Contact <span className='text-white'>Me</span></h1>

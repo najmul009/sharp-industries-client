@@ -11,14 +11,14 @@ const Brands = () => {
     return (
         <div>
             <h1 className='text-center text-4xl fnt-os font-bold my-10'>Brands We Work With</h1>
-            <div className='brands'>
-            <img src={Alibaba} alt=""/>
-               <img src={Amazon} alt=""/>
-               <img src={Daraz} alt=""/>
-               <img src={Ebay} alt=""/>
-               <img src={Rakuten} alt=""/>
-               <img src={Target} alt=""/>
-               <img src={Walmart} alt=""/> 
+            <div className='brands flex gap-10 flex-wrap items-center justify-center'>
+                <img src={Alibaba} alt="" />
+                <img src={Amazon} alt="" />
+                <img src={Daraz} alt="" />
+                <img src={Ebay} alt="" />
+                <img src={Rakuten} alt="" />
+                <img src={Target} alt="" />
+                <img src={Walmart} alt="" />
             </div>
         </div>
     );

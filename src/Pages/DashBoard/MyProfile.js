@@ -7,7 +7,8 @@ const MyProfile = () => {
     return (
         <div>
             <div className='bg-base-200'>
-                <h1 className='text-3xl border-b-4 p-3 border-accent'>My Profile <div class="badge bg-green-500">online</div></h1>
+                <h1 className='text-3xl border-b-4 p-3 border-accent'>My Profile <div class="badge bg-green-500">online</div>  
+                </h1>
 
 
 

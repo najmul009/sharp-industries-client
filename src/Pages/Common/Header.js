@@ -42,6 +42,8 @@ const Header = () => {
                         <li><Link to='/products'>PRODUCTS</Link></li>
                         <li><Link to='/protfolio'>PORTFOLIO</Link></li>
                         <li><Link to='/dashboard'>DashBoard</Link></li>
+                        <li><Link to='/blogs'>Blogs</Link></li>
+
                     </ul>
                 </div>
                 <Link to='/' className="     normal-case text-xl">
