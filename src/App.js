@@ -22,6 +22,7 @@ import RequireAdmin from './Pages/Login/RequireAdmin';
 import NotFound from './Pages/Common/NotFound';
 import Payment from './Pages/Payment/Payment';
 import PortFolio from './Pages/PortFilio/PortFolio';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -35,7 +36,7 @@ function App() {
           <RequireAuth>
             <Order></Order>
           </RequireAuth>}></Route>
-
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>  
 
         {/* dashboard route  */}
         <Route path='/dashboard' element={<RequireAuth><DashBoard></DashBoard> </RequireAuth>}>

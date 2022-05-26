@@ -9,7 +9,7 @@ const Tools = () => {
             .then(data => setItems(data))
     }, [])
     const revItems = [...items];
-    const newItems = revItems.reverse();
+    const newItems = revItems.reverse().slice(0,6);
     return (
         <div className='my-20'>
             <h1 className='text-center fnt-os text-6xl font-bold mb-20'>New Products On Market</h1>

@@ -55,6 +55,18 @@ body {
 .fnt-time{
   font-family: 'Times New Roman', Times, serif;
 }
+.brands{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 20px 0px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.tool-bg{
+  filter: brightness(40%);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

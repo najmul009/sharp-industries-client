@@ -9,8 +9,8 @@ const Card = ({item}) => {
             <div class="card-body">
                 <h2 class="card-title">{name}</h2>
                 <p>{description}</p>
-                <p>Price:{price}</p>
-                <p>Minimum Order:{minimum} pis</p>
+                <p className='font-bold'>Price: <span className='text-red-500'>${price}</span> </p>
+                <p className='font-bold'>Minimum Order:<span className='text-red-500'>{minimum}</span> pis</p>
                 <div class="card-actions justify-end">
                     <Link to={`/order/${_id}`}>
                     <button class="btn btn-primary">Order Now</button>
