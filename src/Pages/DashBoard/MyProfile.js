@@ -13,7 +13,7 @@ const MyProfile = () => {
 
 
 
-                <div className='flex justify-between'>
+                <div className='flex flex-col lg:flex-row justify-between'>
                     <div className='w-96 '>
                         <img className='h-56 m-5' src={user.photoURL || "https://api.lorem.space/image/face?hash=33791"} alt="" />
 
@@ -43,7 +43,7 @@ const MyProfile = () => {
                         </div>
                     </div>
 
-                    <div className='w-full ml-10 p-5'>
+                    <div className='w-full lg:ml-10 p-5'>
                         <div>
                             <h1 className='text-2xl font-bold'>{user.displayName}
                                 <div className="badge bg-neutral mx-3">Pro</div>

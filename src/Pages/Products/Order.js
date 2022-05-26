@@ -67,11 +67,11 @@ const Order = () => {
     return (
         <div className='bg-base-200 px-4 lg:px-20'>
             <h1 className='py-4 text-neutral'>Tools  {'>'}  Shop  {'>'}  Product  {'>'}  {name}</h1>
-            <div className='flex  bg-base-100 '>
+            <div className='flex flex-col lg:flex-row bg-base-100 '>
                 <div className=' shadow-xl h-fit'>
                     <img className='p-1' src={img} alt="" />
                 </div>
-                <div className='w-5/12 p-4 px-4'>
+                <div className='w-ful lg:w-5/12 p-4 px-4'>
                     <h1 className='text-xl'>{description}</h1>
                     <h1 className='my-3 text-2xl '>Model: <span className='text-neutral'>{name}</span> </h1>
                     <h1 className='my-3 text-xl '>Brand: <span className='text-primary'>{brand}</span></h1>
@@ -80,7 +80,7 @@ const Order = () => {
                     <h1 className='my-3 text-xl '>Available quantity: <span className='text-orange-500'>{available} pis</span></h1>
                 </div>
 
-                <div className='bg-accent w-4/12 flex flex-col items-center'>
+                <div className='bg-accent w-ful lg:w-4/12 flex flex-col items-center'>
                     <h1 className='my-3 text-2xl text-center text-white py-3'>Order Summary</h1>
                     <div className="w-full max-w-xs ">
                         <form onSubmit={handleSubmit}>
