@@ -20,7 +20,7 @@ const AddProduct = () => {
         img: image,
         description: description
        }
-       fetch('http://localhost:5000/addproduct',{
+       fetch('https://calm-anchorage-26562.herokuapp.com/addproduct',{
            method: 'POST',
            headers:{
                'content-type': 'application/json',
@@ -41,71 +41,71 @@ const AddProduct = () => {
     }
     return (
         <div className='bg-base-200'>
-            <h1 className='text-3xl border-b-4 p-3 border-accent'>Add a product <div class="badge bg-green-500">online</div></h1>
+            <h1 className='text-3xl border-b-4 p-3 border-accent'>Add a product <div className="badge bg-green-500">online</div></h1>
             <form onSubmit={handelAddProduct} className='px-3 lg:px-20 flex flex-col '>
 
                 <div className='flex justify-between'>
                     <div className='w-full'>
 
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Model Name</span>
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Model Name</span>
                             </label>
-                            <input name='Model' required type="text" placeholder="Model Name" class="input input-bordered rounded-none w-full max-w-xs" />
+                            <input name='Model' required type="text" placeholder="Model Name" className="input input-bordered rounded-none w-full max-w-xs" />
 
                         </div>
 
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Brand Name</span>
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Brand Name</span>
                             </label>
-                            <input name='Brand' required type="text" placeholder="Brand Name" class="input input-bordered rounded-none w-full max-w-xs" />
-
-                        </div>
-
-
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Stock Quantity</span>
-                            </label>
-                            <input name='Stock' required type="number" placeholder="Stock Quantity" class="input input-bordered rounded-none w-full max-w-xs" />
+                            <input name='Brand' required type="text" placeholder="Brand Name" className="input input-bordered rounded-none w-full max-w-xs" />
 
                         </div>
 
 
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Price per unit</span>
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Stock Quantity</span>
                             </label>
-                            <input name='Price' required type="number" placeholder="$$" class="input input-bordered rounded-none w-full max-w-xs" />
+                            <input name='Stock' required type="number" placeholder="Stock Quantity" className="input input-bordered rounded-none w-full max-w-xs" />
 
                         </div>
 
 
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Minimun order qunatity</span>
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Price per unit</span>
                             </label>
-                            <input name='Minimum' required type="number" placeholder="Minimun order qunatity" class="input input-bordered rounded-none w-full max-w-xs" />
+                            <input name='Price' required type="number" placeholder="$$" className="input input-bordered rounded-none w-full max-w-xs" />
+
+                        </div>
+
+
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Minimun order qunatity</span>
+                            </label>
+                            <input name='Minimum' required type="number" placeholder="Minimun order qunatity" className="input input-bordered rounded-none w-full max-w-xs" />
 
                         </div>
                     </div>
 
                     <div  className='w-full'>
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Description</span>
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Description</span>
                             </label>
 
                             <textarea name="Description" id="" cols="30" rows="8" placeholder='Description' className='p-3 w-full max-w-xs'></textarea>
                         </div>
 
                         
-                        <div class="form-control w-full max-w-xs mt-2">
-                            <label class="label">
-                                <span class="label-text font-bold">Add a photo url</span>
+                        <div className="form-control w-full max-w-xs mt-2">
+                            <label className="label">
+                                <span className="label-text font-bold">Add a photo url</span>
                             </label>
-                            <input name='imageUrl' required type="url" placeholder="photo url" class="input input-bordered rounded-none w-full max-w-xs" />
+                            <input name='imageUrl' required type="url" placeholder="photo url" className="input input-bordered rounded-none w-full max-w-xs" />
 
                         </div>
 

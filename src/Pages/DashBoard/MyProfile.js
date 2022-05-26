@@ -7,7 +7,7 @@ const MyProfile = () => {
     return (
         <div>
             <div className='bg-base-200'>
-                <h1 className='text-3xl border-b-4 p-3 border-accent'>My Profile <div class="badge bg-green-500">online</div>  
+                <h1 className='text-3xl border-b-4 p-3 border-accent'>My Profile <div className="badge bg-green-500">online</div>  
                 </h1>
 
 
@@ -28,13 +28,13 @@ const MyProfile = () => {
                         <div className='p-5'>
                             <h1 className='border-b border-accent'>Woks</h1>
                             <div className='my-3'>
-                                <p className='font-bold text-xl'>Spotify New York <div class="badge bg-neutral">Primary</div></p>
+                                <p className='font-bold text-xl'>Spotify New York <div className="badge bg-neutral">Primary</div></p>
                                 <p>170 Willam Street</p>
                                 <p>New York, NY 10038-78 212-312</p>
                             </div>
 
                             <div className='my-3'>
-                                <p className='font-bold text-xl'>TechLand BD <div class="badge bg-neutral">Secondary</div></p>
+                                <p className='font-bold text-xl'>TechLand BD <div className="badge bg-neutral">Secondary</div></p>
                                 <p>Multiplan Elephant Road</p>
                                 <p>69, 71 New Elephant Road, Dhaka 1205</p>
                             </div>
@@ -46,17 +46,17 @@ const MyProfile = () => {
                     <div className='w-full ml-10 p-5'>
                         <div>
                             <h1 className='text-2xl font-bold'>{user.displayName}
-                                <div class="badge bg-neutral mx-3">Pro</div>
+                                <div className="badge bg-neutral mx-3">Pro</div>
                             </h1>
                             <p className='text-neutral py-2'>Full Stack Devloper</p>
 
-                            <div class="rating">
+                            <div className="rating">
                                 <p>Rating: </p>
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                             </div>
                         </div>
 

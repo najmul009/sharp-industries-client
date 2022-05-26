@@ -14,7 +14,7 @@ const AddReview = () => {
             review: review
         }
 
-        fetch('http://localhost:5000/addreview', {
+        fetch('https://calm-anchorage-26562.herokuapp.com/addreview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -35,23 +35,23 @@ const AddReview = () => {
     }
     return (
         <div className='h-screen flex justify-center items-center bg-base-200'>
-            <div class="card  bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">Hello {user?.displayName}!</h2>
+            <div className="card  bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">Hello {user?.displayName}!</h2>
                     <p>Share Your experiences and feedback to us.So that we can improve our services for you.</p>
                     <form onSubmit={handelReview}>
                         <textarea name="review" id="" cols="60" rows="10" className='box-lg' placeholder="Type here"></textarea>
                         <br />
-                        <div class="rating my-5">
+                        <div className="rating my-5">
                             <p className='font-bold'>Rating :</p>
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         </div>
                         <br />
-                        <button class="btn btn-neutral" type='submit' >Submit</button>
+                        <button className="btn btn-neutral" type='submit' >Submit</button>
                     </form>
 
                 </div>

@@ -6,13 +6,13 @@ const OrderRow = ({ order, index, setConfirmModal }) => {
     const {productName,orderQuantity,totalAmount,_id}= order;
     
     return (
-        <tr class="hover">
+        <tr className="hover">
             <th>{index + 1}</th>
             <td>{productName}</td>
             <td>{orderQuantity}</td>
             <td>{totalAmount}</td>
             <td>{
-                order.paid? <span className="text-red-500">You can't cancel after pay</span> : <label onClick={() => setConfirmModal(order)} for="delete-confirm-modal" class="btn btn-sm modal-button btn-warning ">Cancel</label >
+                order.paid? <span className="text-red-500">You can't cancel after pay</span> : <label onClick={() => setConfirmModal(order)} for="delete-confirm-modal" className="btn btn-sm modal-button btn-warning ">Cancel</label >
                 }
                 
             </td>

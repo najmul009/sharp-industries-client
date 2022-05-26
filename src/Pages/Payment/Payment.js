@@ -26,9 +26,9 @@ const Payment = () => {
     return (
         <div className='bg-base-200 h-screen flex justify-center items-center'>
 
-            <div class="card w-96 bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title">Hello! {userName}</h2>
+            <div className="card w-96 bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title">Hello! {userName}</h2>
                     <p>You are paying fro <strong className='text-neutral'>{productName}</strong></p>
                     <p>Brand: <strong>{brand}</strong></p>
                     <p>Product quantiity: <strong className='text-red-700'> {orderQuantity} pis</strong>  </p>

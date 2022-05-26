@@ -28,16 +28,16 @@ const DeleteConfirmModal = ({ order, refetch, setConfirmModal }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg">Are you sure you want to cancel this order!</h3>
-                    <p class="py-2">Product Name: <span className='text-neutral'>   {productName}</span></p>
-                    <p class="py-2">Order Quantity: <span className='text-orange-500'> {orderQuantity} pis</span></p>
-                    <p class="py-2">Total Price:<span className='text-orange-500'> ${totalAmount}</span> </p>
-                    <div class="modal-action">
-                        <label for="delete-confirm-modal" class="btn">NO</label>
-                        <button onClick={cancelOrder} class="btn btn-warning">YES</button>
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg">Are you sure you want to cancel this order!</h3>
+                    <p className="py-2">Product Name: <span className='text-neutral'>   {productName}</span></p>
+                    <p className="py-2">Order Quantity: <span className='text-orange-500'> {orderQuantity} pis</span></p>
+                    <p className="py-2">Total Price:<span className='text-orange-500'> ${totalAmount}</span> </p>
+                    <div className="modal-action">
+                        <label for="delete-confirm-modal" className="btn">NO</label>
+                        <button onClick={cancelOrder} className="btn btn-warning">YES</button>
                     </div>
                 </div>
             </div>

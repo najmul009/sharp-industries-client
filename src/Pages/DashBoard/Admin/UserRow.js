@@ -25,11 +25,11 @@ const UserRow = ({ index, user, refetch ,setConfirmModal}) => {
     }
     
     return (
-        <tr class="hover">
+        <tr className="hover">
             <td>{index + 1}</td>
             <td>{user.email}</td>
-            <td>{(user.role!== 'admin')? <button onClick={makeAdmin} class="btn btn-sm btn-accent">Make Admin</button> : <span className="text-green-500 font-bold">Admin</span>}</td>
-            <td><label onClick={() => setConfirmModal(user)} for="delete-confirm-modal" class="btn btn-sm modal-button btn-warning ">Delete</label ></td>
+            <td>{(user.role!== 'admin')? <button onClick={makeAdmin} className="btn btn-sm btn-accent">Make Admin</button> : <span className="text-green-500 font-bold">Admin</span>}</td>
+            <td><label onClick={() => setConfirmModal(user)} for="delete-confirm-modal" className="btn btn-sm modal-button btn-warning ">Delete</label ></td>
         </tr>
     );
 };

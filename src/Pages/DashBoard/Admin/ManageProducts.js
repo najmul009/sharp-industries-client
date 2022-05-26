@@ -29,8 +29,8 @@ const ManageProducts = () => {
         <div>
             <h1 className='w-fit mx-auto border-b-4  border-primary text-secondary text-2xl my-5 '>Manage Products</h1>
             {fetchError}
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr className='mark'>
                             <th>#</th>

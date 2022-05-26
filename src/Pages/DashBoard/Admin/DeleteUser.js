@@ -27,15 +27,15 @@ const DeleteUser = ({ user, refetch, setConfirmModal }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-bold text-lg text-red-500">Are you sure you want to delete the user!</h3>
-                    <p class="py-2">User Email: <span className='text-neutral'>   {email}</span></p>
-                    <p class="py-2">Role: <span className='font-bold '> {role?'Admin':'Normal User'}</span></p>
-                    <div class="modal-action">
-                        <label for="delete-confirm-modal" class="btn">NO</label>
-                        <label onClick={deleteUser} class="btn btn-warning">YES</label>
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-bold text-lg text-red-500">Are you sure you want to delete the user!</h3>
+                    <p className="py-2">User Email: <span className='text-neutral'>   {email}</span></p>
+                    <p className="py-2">Role: <span className='font-bold '> {role?'Admin':'Normal User'}</span></p>
+                    <div className="modal-action">
+                        <label for="delete-confirm-modal" className="btn">NO</label>
+                        <label onClick={deleteUser} className="btn btn-warning">YES</label>
                     </div>
                 </div>
             </div>

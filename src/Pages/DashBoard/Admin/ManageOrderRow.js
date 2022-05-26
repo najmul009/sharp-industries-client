@@ -21,7 +21,7 @@ const ManageOrderRow = ({ order, index, setConfirmModal,refetch }) => {
         
     }
     return (
-        <tr class="hover">
+        <tr className="hover">
             <th>{index + 1}</th>
             <td>{userEmail}</td>
             <td>{productName}</td>
@@ -41,7 +41,7 @@ const ManageOrderRow = ({ order, index, setConfirmModal,refetch }) => {
             }</td>
 
             <td>{
-                order.paid ? <span className="text-green-500">Already Paid!</span> : <label  onClick={() => setConfirmModal(order)} for="delete-confirm-modal" class="btn  btn-sm modal-button btn-warning ">Cancel</label >
+                order.paid ? <span className="text-green-500">Already Paid!</span> : <label  onClick={() => setConfirmModal(order)} for="delete-confirm-modal" className="btn  btn-sm modal-button btn-warning ">Cancel</label >
             }
 
             </td>

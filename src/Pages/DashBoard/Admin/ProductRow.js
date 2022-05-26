@@ -8,7 +8,7 @@ const ProductRow = ({ product, index, setConfirmModal, refetch }) => {
     
     }
     return (
-        <tr class="hover">
+        <tr className="hover">
             <th>{index + 1}</th>
             <td>{name}</td>
             <td>{brand}</td>
@@ -22,7 +22,7 @@ const ProductRow = ({ product, index, setConfirmModal, refetch }) => {
             </td>
 
             <td>
-                <label onClick={() => setConfirmModal(product)} for="delete-confirm-modal" class="btn btn-sm modal-button btn-warning ">Delete</label >
+                <label onClick={() => setConfirmModal(product)} for="delete-confirm-modal" className="btn btn-sm modal-button btn-warning ">Delete</label >
 
             </td>
         </tr>
