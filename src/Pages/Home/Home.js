@@ -4,6 +4,7 @@ import Banner from './Banner';
 import Brands from './Brands';
 import BusinessSummary from './BusinessSummary';
 import Comming from './Comming';
+import Contact from './Contact';
 import Reviews from './Reviews';
 import Tools from './Tools';
 
@@ -16,6 +17,7 @@ const Home = () => {
             <BusinessSummary></BusinessSummary>
             <Reviews></Reviews>
             <Comming></Comming>
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );
