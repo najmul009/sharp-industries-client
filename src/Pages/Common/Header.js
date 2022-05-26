@@ -18,6 +18,9 @@ const Header = () => {
     if (error) {
         signInError = <p className='text-red-500'><small>{error?.message}</small></p>
     };
+    const name = user.displayName;
+    const myArray = name.split(" ");
+    const userName = myArray[0];
     return (
         <div className="navbar  lg:px-20 pt-5 ">
             <div className="navbar-start">
@@ -47,27 +50,32 @@ const Header = () => {
             <div className="navbar-end">
                 {signInError}
                 {!user && <Link to='/login' className="btn text-white">Login</Link>}
-                {user && <>
+                {user && <div className='flex items-center border-2 border-base-200 rounded-full pr-2 hover:bg-base-200'>
+                   
                     <div class="dropdown dropdown-end">
-                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                        <div class="w-10 rounded-full">
-                            <img src={user.photoURL || "https://api.lorem.space/image/face?hash=33791"} alt='' />
-                        </div>
-                    </label>
-                    <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                        <li>
-                            <Link to='/' class="justify-between">
-                                Profile
-                                
-                            </Link>
-                        </li>
-                        
-                        <li><button onClick={logout} >Logout</button></li>
-                    </ul>
-                </div>
-                </>}
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-10 rounded-full">
+                                <img src={user.photoURL || "https://api.lorem.space/image/face?hash=33791"} alt='' />
+                            </div>
+                        </label>
+                        <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                            <li className='text-center'>
+                                <h1 className='text-center font-bold text-accent'>{user.displayName}</h1>
+                            </li>
+                            <li>
+                                <Link to='/' class="justify-between">
+                                    Profile
+
+                                </Link>
+                            </li>
+
+                            <li><button onClick={logout} >Logout</button></li>
+                        </ul>
+                    </div>
+                    <h1 className='text-center font-bold text-accent'>{userName}</h1>
+                </div>}
             </div>
-            
+
         </div>
     );
 };
