@@ -6,6 +6,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper";
 import ReviewCard from './ReviewCard';
+import './Review.css'
 
 const Reviews = () => {
     const [reviews,setReviews] =useState([]);
@@ -21,8 +22,8 @@ const Reviews = () => {
         <div className='mx-20 py-10'>
             <h1 className='text-center fnt-os text-6xl font-bold mb-20'>What Our Coustomar Says!</h1>
               <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={1}
+        spaceBetween={10}
         freeMode={true}
         pagination={{
           clickable: true,
@@ -41,7 +42,7 @@ const Reviews = () => {
             spaceBetween: 30,
           },
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[ Pagination]}
         className="mySwiper"
       >
           {

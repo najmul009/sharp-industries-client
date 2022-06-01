@@ -44,7 +44,7 @@ const AddProduct = () => {
             <h1 className='text-3xl border-b-4 p-3 border-accent'>Add a product <div className="badge bg-green-500">online</div></h1>
             <form onSubmit={handelAddProduct} className='px-3 lg:px-20 flex flex-col '>
 
-                <div className='flex justify-between'>
+                <div className='flex flex-col lg:flex-row justify-between'>
                     <div className='w-full'>
 
                         <div className="form-control w-full max-w-xs mt-2">
